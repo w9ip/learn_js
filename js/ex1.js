@@ -1,9 +1,17 @@
 "use strict";
 
-let S=0, M=10, N=5;
-all: for (let i=1; i<=N; i++)
-    for (let j=1; j<=M; j++) {
-        if (j==5) break all;
-        S += i*j;
+function show_primes(n) {
+    for (let i = 2; i < n; i++) {
+        if (!is_prime(i)) continue;
+        console.log(i);
     }
-console.log('S=' + S);  // S=10
+}
+
+function is_prime(n) {
+    for (let i=2; i<n; i++) {
+        if (n%i==0) return false;
+    }
+    return true;
+}
+
+show_primes(10);  // 2 3 5 7
