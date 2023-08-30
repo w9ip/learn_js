@@ -1,17 +1,11 @@
 "use strict";
 
-function show_primes(n) {
-    for (let i = 2; i < n; i++) {
-        if (!is_prime(i)) continue;
-        console.log(i);
-    }
-}
+let two_sum1 = function (a, b) {
+    console.log(a+b)
+};
 
-function is_prime(n) {
-    for (let i=2; i<n; i++) {
-        if (n%i==0) return false;
-    }
-    return true;
-}
+two_sum1(1, 2);  // печатает 3
 
-show_primes(10);  // 2 3 5 7
+let two_sum2 = (a, b) => console.log(a+b);
+
+two_sum2(2, 3);  // печатает 5
